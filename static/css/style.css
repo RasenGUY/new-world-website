@@ -213,12 +213,15 @@ figure {
   }
 }
 .fh5co-cover .desc {
-  top: 70%;
+  top: 45%;
   position: absolute;
   width: 100%;
   margin-top: -80px;
   z-index: 2;
   color: #fff;
+}
+.fh5co-cover.index .desc {
+  top: 70% !important;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover .desc {
@@ -381,8 +384,11 @@ figure {
   float: left;
   width: 100%;
 }
-
+#fh5co-logo-word {
+  display: none;
+}
 #fh5co-logo {
+  display: content;
   position: relative;
   z-index: 2;
   font-size: 22px;
@@ -413,6 +419,12 @@ figure {
     width: 100%;
     float: none;
     text-align: center;
+  }
+  #fh5co-logo a div {
+    display: none;
+  }
+  #fh5co-logo-word {
+    display: contents;
   }
 }
 #fh5co-logo a {
@@ -1405,7 +1417,7 @@ figure {
   .fh5co-nav-toggle {
     display: block;
     top: 0px;
-    margin-top: 2em;
+    margin-top: 0.5rem;
   }
 }
 
