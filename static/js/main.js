@@ -133,7 +133,11 @@
 		      offset: 0
 		  })
 		}
-	}; 
+	};
+
+	// var lightBox = function () {
+		
+	// }
 
 	// Document on load.
 	$(function(){
@@ -143,6 +147,7 @@
 		mobileMenuOutsideClick();
 		contentWayPoint();
 		stickyBanner();
+		// lightBox();
 	});
 
 
