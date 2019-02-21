@@ -66,6 +66,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 30px 0;
 }
 
+strong {
+  color: var(--theme-one);
+}
+
 figure {
   margin-bottom: 2em;
 }
@@ -103,7 +107,7 @@ figure {
 
 .header-top {
   padding: 10px 0;
-  background: #ff5722;
+  background: var(--theme-one);
 }
 .header-top .fh5co-link a {
   margin-left: 10px;
@@ -186,7 +190,7 @@ figure {
   bottom: 0;
   right: 0;
   z-index: 1;
-  background: rgba(66, 64, 64, 0.9);
+  background: rgba(66, 64, 64, 0.6);
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -200,7 +204,7 @@ figure {
     padding: 3em 0;
   }
 }
-.fh5co-cover .btn {
+.btn {
   padding: 1em 2em;
   opacity: .9;
 }
@@ -220,21 +224,20 @@ figure {
   margin-top: -80px;
   z-index: 2;
   color: #fff;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
-/* .fh5co-cover.index .desc {
-  top: 70% !important;
-} */
 
 @media screen and (max-width: 768px) {
   .fh5co-cover .desc {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 .fh5co-cover .desc h2 {
   color: #fff;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 50px;
   margin-bottom: 10px;
   font-weight: 300 !important;
 }
@@ -243,26 +246,26 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover .desc h2 {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
-.fh5co-cover .desc span {
+.desc span {
   display: block;
   margin-bottom: 30px;
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
-.fh5co-cover .desc span a {
+.desc span a {
   color: #fff;
 }
-.fh5co-cover .desc span a:hover, .fh5co-cover .desc span a:focus {
+.desc span a:hover, .desc span a:focus {
   color: #fff !important;
 }
-.fh5co-cover .desc span a:hover.btn, .fh5co-cover .desc span a:focus.btn {
+.desc span a:hover.btn, .desc span a:focus.btn {
   border: 2px solid #fff !important;
   background: transparent !important;
 }
-.fh5co-cover .desc span a.fh5co-site-name {
+.desc span a.fh5co-site-name {
   padding-bottom: 2px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
@@ -1215,7 +1218,7 @@ figure {
   transition: 0.3s;
 }
 .btn.btn-primary {
-  background: #ff5722;
+  background: var(--theme-one);
   color: #fff;
   border: none !important;
   border: 2px solid transparent !important;
@@ -1518,65 +1521,77 @@ figure {
 /* new css  */
 
   /*  index page */
-/* 
-.video-container {
-  object-fit: contain;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -9000;
-} */
 
-.background-settings {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.background-settings.index {
-  background-position-y: -15rem;
-}
-
-/* gallery */
-
-.gallery div {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-img {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  }
-
-.grid {
-  position: relative;
-  top: 5rem;
-  padding: 0 !important;
-}
-  .item {
-    display: block; 
-    position: absolute;
-    line-height: 200px;
-    text-align: center;
-    z-index: 1;
-    padding: 5px! important; 
-  }
-  
-  .item-content {
-    position: relative;
-    /* background: #000; */
-    color: #fff;
-    cursor: pointer;
-    font-size: 40px;
-    text-align: center;
+    /* general settings */
     
-  } 
-  .item-content img {
-    width: 100%;
-    height: 100%;
+    .background-settings {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .background-settings.index {
+      background-position-y: -15rem;
     }
 
-    .gallery-students-heading-section {
-      margin-bottom: 0;
+    /* gallery */
+    .gallery div {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
+
+    img {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      }
+
+    .grid {
+      position: relative;
+      top: 5rem;
+      padding: 0 !important;
+    }
+      .item {
+        display: block; 
+        position: absolute;
+        line-height: 200px;
+        text-align: center;
+        z-index: 1;
+        padding: 5px! important; 
+      }
+      
+      .item-content {
+        position: relative;
+        /* background: #000; */
+        color: #fff;
+        cursor: pointer;
+        font-size: 40px;
+        text-align: center;
+      } 
+
+      .item-content img {
+        width: 100%;
+        height: 100%;
+        }
+
+        .gallery-students-heading-section {
+          margin-bottom: 0;
+        }
+    
+      /* index page */
+      .index-about {
+        position: relative;
+      }
+        .index-about .fh5co-overlay{
+          z-index: 0;
+        }
+        .index-about .container .row .desc > h1, h2, h4 {
+          color: var(--base-light);
+        }
+        .index-about .container .row .desc > p, h4 {
+          line-height: 1.8! important;
+          letter-spacing: 2.5px;
+        }
+        .index-about .fh5co-overlay {
+          background: rgba(66, 64, 64, 0.6);
+        }
