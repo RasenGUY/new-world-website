@@ -66,10 +66,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 30px 0;
 }
 
-strong {
-  color: var(--theme-one);
-}
-
 figure {
   margin-bottom: 2em;
 }
@@ -1533,6 +1529,13 @@ figure {
       background-position-y: -15rem;
     }
 
+    .blue {
+      color: var(--theme-two);
+    }
+    .orange {
+      color: var(--theme-one);
+    }
+
     /* gallery */
     .gallery div {
       height: 100%;
@@ -1582,6 +1585,9 @@ figure {
       .index-about {
         position: relative;
       }
+        .index-hero .fh5co-overlay{
+          background: rgba(66, 64, 64, 0.7);
+        }
         .index-about .fh5co-overlay{
           z-index: 0;
         }
@@ -1595,3 +1601,10 @@ figure {
         .index-about .fh5co-overlay {
           background: rgba(66, 64, 64, 0.6);
         }
+
+      /* get involveved volunteering */
+
+        .ginv-volunteering .fh5co-cover {
+          background-position-y: -20rem;
+        }
+
