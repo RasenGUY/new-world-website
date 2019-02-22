@@ -451,7 +451,6 @@ figure {
 #fh5co-primary-menu > li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -475,7 +474,6 @@ figure {
 #fh5co-primary-menu > li > ul li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1591,7 +1589,7 @@ figure {
         .index-about .fh5co-overlay{
           z-index: 0;
         }
-        .index-about .container .row .desc > h1, h2, h4 {
+        .index-about .container .row .desc > h1, .index-about .container .row .desc > h2, .index-about .container .row .desc > h4{
           color: var(--base-light);
         }
         .index-about .container .row .desc > p, h4 {
