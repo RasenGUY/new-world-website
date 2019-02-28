@@ -37,6 +37,7 @@ body {
   font-weight: 300;
   overflow-x: hidden;
 }
+
 body.fh5co-offcanvas {
   overflow: hidden;
 }
@@ -220,12 +221,11 @@ figure {
   margin-top: -80px;
   z-index: 2;
   color: #fff;
-  padding-left: 10rem;
-  padding-right: 10rem;
 }
 
+
 @media screen and (max-width: 768px) {
-  .fh5co-cover .desc {
+  .desc {
     padding-left: 5rem;
     padding-right: 5rem;
   }
@@ -244,6 +244,7 @@ figure {
   .fh5co-cover .desc h2 {
     font-size: 25px;
   }
+  .
 }
 .desc span {
   display: block;
@@ -1514,10 +1515,22 @@ figure {
 
 /* new css  */
 
-  /*  index page */
+/* general settings */
 
-    /* general settings */
+@media screen and (max-width: 992px) {
+  .desc {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) .desc.volunteering-content {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+  
     
+  /*  index page */ 
     .background-settings {
       background-size: cover;
       background-repeat: no-repeat;
@@ -1601,8 +1614,31 @@ figure {
         }
 
       /* get involveved volunteering */
-
-        .ginv-volunteering .fh5co-cover {
+        .volunteering {
+          position: relative;
+          height: 50rem;
           background-position-y: -20rem;
         }
+        .volunteering .fh5co-cover {
+          height: 100%;
+        }
+          .gen-info .img-gallery {
+            width: 60%;
+            height: 40rem; 
+          }
+          .important-to-know .img-gallery {
+            width: 40%;
+            height: 40rem; 
+          }
+          .accommodation .img-gallery:nth-child(1) {
+            width: 60%;
+            height: 40rem; 
+          }
+          .accommodation .img-gallery {
+            width: 40%;
+            height: 35rem; 
+          }
+
+
+
 
