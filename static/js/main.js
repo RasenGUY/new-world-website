@@ -2,8 +2,6 @@
 	
 	'use strict';
 
-
-
 	// iPad and iPod detection	
 	var isiPad = function(){
 		return (navigator.platform.indexOf("iPad") != -1);
@@ -138,7 +136,7 @@
 	// var lightBox = function () {
 		
 	// }
-
+	
 	// Document on load.
 	$(function(){
 		mainMenu();
@@ -149,6 +147,5 @@
 		stickyBanner();
 		// lightBox();
 	});
-
 
 }());

@@ -92,28 +92,20 @@
 									<a href="index.html">Home</a>
 								</li>
 								<li>
-									<a href="#" class="fh5co-sub-ddown">Get Involved</a>
-									<ul class="fh5co-sub-menu">
-										<li><a href="getinvolved-volunteering.html">Volunteering</a></li>
-										<!-- <li><a href="#">Guidelines</a></li> -->
-										<!-- <li><a href="#">Projects</a></li> -->
-										<li>
-											<a href="#" class="fh5co-sub-ddown">Resources</a>
-											<ul class="fh5co-sub-menu">
-												<li><a href="">Setting Up</a></li>
-												<li>
-													<a href="" class="fh5co-sub-ddown">Class Preparation</a>
-													<ul class="fh5co-sub-menu">
-														<li><a href="">Age Groups 2-4</a></li>
-														<li><a href="">Age Groups 5-8</a></li>
-														<li><a href="">Age Groups 9-11</a></li>
-														<li><a href="">Age Groups 12-17</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li><a href="#">Sign Up</a></li>									
-									</ul>
+										<a href="#" class="fh5co-sub-ddown">Get Involved</a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="volunteering.html">Volunteering</a></li>
+											<li>
+												<a href="#" class="fh5co-sub-ddown">Class Preparation</a>
+												<ul class="fh5co-sub-menu">
+													<li><a href="">Age Groups 2-4</a></li>
+													<li><a href="">Age Groups 5-8</a></li>
+													<li><a href="">Age Groups 9-11</a></li>
+													<li><a href="">Age Groups 12-17</a></li>	
+												</ul>
+											</li>
+											<li><a href="#">Sign Up</a></li>									
+										</ul>
 								</li>
 								<li class="active">
 									<a href="gallery.html" class="fh5co-sub-ddown">Gallery</a>
@@ -281,6 +273,9 @@
 
 	<script>
 		const grid = new Muuri ('.grid');
+		window.addEventListener('load', function () {
+			grid.refreshItems();
+		});
 	</script> 
 
 	</body>
