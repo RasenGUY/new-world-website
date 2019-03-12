@@ -1679,12 +1679,40 @@ figure {
             align-items: center;
           }
 
-          .age-group-box .desc > h1 {
+          .age-group-box .desc > h1{
             font-size: 15rem  ;
             font-family: "Brush Script MT" !important;
             color: var(--base-light);
-
           }
+
+
+          .class-prep .row .col-md-6 .age-group-box .desc :hover {
+              background-color: transparent;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              -ms-box-shadow: none;
+              -o-box-shadow: none;
+              box-shadow: none;
+          }
+          .class-prep .row .col-md-6 a:hover .desc h1 {
+              color: var(--theme-one);
+              -webkit-transition: 0.5s;
+              -o-transition: 0.5s;
+              transition: 0.5s; 
+          }
+
+          .class-prep .row .col-md-6 a :hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            -ms-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            -o-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;   
+          }
+            
 
 
 
