@@ -1693,13 +1693,15 @@ figure {
               box-shadow: none;
           }
           .class-prep .row .col-md-6 a:hover .desc h1 {
-              color: var(--theme-one);
-              -webkit-transition: 0.5s;
-              -o-transition: 0.5s;
-              transition: 0.5s; 
+            text-decoration: none; 
+            color: var(--theme-one);
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s; 
           }
 
           .class-prep .row .col-md-6 a :hover {
+            text-decoration: none;
             background-color: rgba(0, 0, 0, 0.5);
             -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
             -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
