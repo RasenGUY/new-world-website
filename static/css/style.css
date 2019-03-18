@@ -128,7 +128,7 @@ figure {
   }
 }
 .header-top .fh5co-social a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7)!important;
   font-size: 14px;
   margin-right: 15px;
   position: relative;
@@ -289,7 +289,7 @@ figure {
 }
 
 .sf-menu a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5)!important;
   padding: 0.75em 1em !important;
   font-weight: normal;
   border-left: none;
@@ -329,7 +329,7 @@ figure {
 .sf-menu ul li:hover a,
 .sf-menu ul li.sfHover a,
 .sf-menu li.active a {
-  color: #ff5722;
+  color: #ff5722 !important;
 }
 
 .sf-menu ul li:hover,
@@ -1198,7 +1198,7 @@ figure {
   font-size: 14px;
 }
 #footer p a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5)!important;
 }
 #footer p a:hover, #footer p a:active, #footer p a:focus {
   color: rgba(255, 255, 255, 0.9) !important;
@@ -1219,7 +1219,7 @@ figure {
 }
 .btn.btn-primary {
   background: var(--theme-one);
-  color: #fff;
+  color: #fff !important;
   border: none !important;
   border: 2px solid transparent !important;
 }
@@ -1311,7 +1311,7 @@ figure {
   padding-left: 20px;
 }
 #offcanvas-menu ul li.active > a {
-  color: #ff5722;
+  color: #ff5722 !important;
 }
 #offcanvas-menu ul .fh5co-sub-menu {
   display: block !important;
@@ -1522,6 +1522,15 @@ figure {
 
 /* general settings */
 
+a {
+  color: var(--theme-one) !important;
+  text-decoration:none;
+}
+a:focus, a:hover {
+  color: var(--theme-two) !important;
+  text-decoration: none !important;
+}
+
 @media screen and (max-width: 992px) {
   .desc {
     padding-left: 10rem;
@@ -1700,7 +1709,7 @@ figure {
             transition: 0.5s; 
           }
 
-          .class-prep .row .col-md-6 a :hover {
+          .class-prep .row .col-md-6 a:hover {
             text-decoration: none;
             background-color: rgba(0, 0, 0, 0.5);
             -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
@@ -1712,6 +1721,8 @@ figure {
             -o-transition: 0.5s;
             transition: 0.5s;   
           }
+
+
             
 
 
