@@ -34,7 +34,12 @@
   -ms-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  
+  
+    
 }
+
+
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
@@ -242,6 +247,21 @@ figure {
   margin-bottom: 10px;
   font-weight: 300 !important;
 }
+  
+  .brush {
+    font-family: "Brush Script MT" !important;
+    text-transform: inherit !important;
+    font-size: 60px !important;
+    margin-bottom: inherit !important;
+    font-weight: inherit !important;
+    display: inline-block !important;
+  }
+
+  .row.spacer {
+    height: 2rem;
+}
+
+  
 .fh5co-cover .desc h2 strong {
   font-weight: 700;
 }
@@ -1633,29 +1653,30 @@ a:focus, a:hover {
           height: 50rem;
           background-position-y: -20rem;
         }
+
+        .content p {
+          line-height: 1.6;
+        }
+        .content > h1, h2, h3, h4, h5, h6 {
+          line-height: 1.7;
+          margin: 0;
+        }
+
         .volunteering .fh5co-cover {
           height: 100%;
         }
-          .gen-info .img-gallery {
+          .img-gallery.one, .img-gallery.five {
+            width: 30%;
+            height: 30rem; 
+          }
+          .img-gallery.two, .img-gallery.three, .img-gallery.four {
             width: 35%;
             height: 35rem; 
           }
-          .important-to-know .img-gallery {
-            width: 40%;
-            height: 40rem; 
-          }
-          .accommodation .img-gallery.one {
-            width: 50%;
-            height: 50rem; 
-          }
-          .accommodation .img-gallery.two {
-            width: 30%;
-            height: 60rem; 
-          }
 
-          .accommodation .img-gallery.three {
+          .img-gallery.six {
             width: 30%;
-            height: 60rem; 
+            height: 75rem;
           }
 
         /* Get class prepartion (main page) */
@@ -1682,7 +1703,6 @@ a:focus, a:hover {
             width: 100%;
             justify-self: stretch; 
             display: grid;
-            /* align-content: center; */
             align-items: center;
           }
 
@@ -1721,7 +1741,6 @@ a:focus, a:hover {
             -o-transition: 0.5s;
             transition: 0.5s;   
           }
-
 
             
 
