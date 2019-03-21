@@ -1655,7 +1655,30 @@ a:focus, a:hover {
         }
         .faq .row .col-md-12 {
           padding: 0;
+
         }
+
+        .faq .row .col-md-12 ul {
+          list-style-type: none;
+          padding: 0;
+        }
+
+          .faq .row ul .panel {
+            margin: 0;
+            border-radius: 0;
+          }
+          .faq .row ul .panel .panel-heading {
+            text-align: center;
+          }
+          .faq .row .col-md-12 ul li .panel-body ul {
+            list-style-type: none;
+          }
+          .faq .row .col-md-12 ul li .panel-body ul li::before{
+            content: '\2014';
+            padding: 1.5rem;
+          }
+
+
 
         .content p {
           line-height: 1.6;
