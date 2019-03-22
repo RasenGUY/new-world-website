@@ -133,10 +133,7 @@
 		}
 	};
 
-	// var lightBox = function () {
-		
-	// }
-	
+			
 	// Document on load.
 	$(function(){
 		mainMenu();
@@ -145,7 +142,6 @@
 		mobileMenuOutsideClick();
 		contentWayPoint();
 		stickyBanner();
-		// lightBox();
 	});
 
 }());

@@ -1655,21 +1655,36 @@ a:focus, a:hover {
         }
         .faq .row .col-md-12 {
           padding: 0;
-
         }
 
         .faq .row .col-md-12 ul {
           list-style-type: none;
           padding: 0;
         }
-
           .faq .row ul .panel {
             margin: 0;
             border-radius: 0;
+            border: none;
           }
-          .faq .row ul .panel .panel-heading {
-            text-align: center;
+          .panel-heading:hover  {
+            background-color: rgba(255, 96, 15, 0.75);
+            transition: 0.5s; 
           }
+
+          .panel-body {
+            border: none;
+            padding: 2rem!important;
+          }
+            .transition {
+              transition: all 1s ease;
+            }
+            .bg-on {
+              background-color: rgba(255, 96, 15, 0.75) !important;
+            }
+            .dsp-off {
+              transition: all 1s ease;
+              display: none; 
+            }
           .faq .row .col-md-12 ul li .panel-body ul {
             list-style-type: none;
           }
