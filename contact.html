@@ -41,8 +41,14 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+	<!-- openStreetMap -->
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+
+
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	
@@ -126,11 +132,10 @@
 
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url('https://lh3.googleusercontent.com/vV4kIw9EJ9FRgobp8m0D3jMxShI4MNWYCvCz5tSk9dNVYAN3X3D6JzvOR-kupLAKgpa6dOqzlo0nVwSVC8fPSMTIlpGtaptqDRyqzXfkHL8p29Vt6xCCiWQ3mI_YpAHbeqMeKNLF87N-5uUt05egtyTFGDAK_TT8QBvTc8UX6iCVjamjLdEQiYg_IH6IGAxnxJJpSTQgu1YXbDHJ248UvpkMfA7jkp84KCz7t57mCnyszqc2W2WcJiJV_dA3rM_ig7CdVNK-agjGy-iOTLCwVZi0_BBNay32zOu8ryegFueYpFCDnPlmMp2LHtjqlsoaX1YQZP3Bh2mmDRl6ss-rUQBzh1AQ1obqS1CiG3gi0sFlCCAB70yuJQ8YeS7vzeMukW8wDhQDQYrMA4mTMbi6ZcAd2njJ5PwBnSsHd67Gp21SwN2J4USYNuN99dieiqQlitdLQBziqQt1x6NJ-0lzXKGTdy5dg2A1aEfRD75_vsuRIMdSpmxt7cpJ4Up3Hzj9gop3Ew5hNcv-mxwWeS6uaVfK3bXhUmtV70wH00KFHo69HSoLr6-cg-utVR4nyswlBfGWm_j7VyVsAnywdQ17XiGDGxIdemR7n2NR93aZEc00UmZGcL1UeCs0PmiOi8MNIatBfoOvqRQ_ww1DPkJggyoh3EjRt9M=w449-h300-no');">
+			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url('https://lh3.googleusercontent.com/eXmaZgcVyXTxFbpsoJEuiyLdozRgmtN6tFWmAsFbfp2twhrEnhJO2f68TzuWPwDLe54aPyzF84gg1X8atTnx8PuyO-LXOjwCqu3adoXuswNZYOiVH9_jnEIL7hzXc-gGOdKC6xpleG9CPkKfh96UGwSbocQt-Y4HXp8TuUawruGG_Cc5u3fIYGDUiNAFNMsNipcObG-iT8xazF4j2WsSBGyUQaKVWcif1a74lIQtA2DlVv8vpMdddeS4E1KGV6XXcljMwLKQlCNkyozDQBYHunxo3ZL-KPhsfyBCeo8I4Wqg1c_jRRYIbfdgCkerSSoo4hysp9c2SG2RW5s-LFwJAeBtWa9apwuKZehA_ibUbR2GEqA2Sdh8HfqSrfdEtEyZKhyf4N50_RQhpHpJj4kWmoaKZ-rYLSRti4Q-uSGE9MnweDaAh3N6RFodw-J_Weub3hTbCegi679lpgd3nSj9jmFhfXHTbtgsIZ_LmqbmbwB5usC_Z6G-gtPRZaUYEmFW46DfyoOdO74qf9oEeXW--U2-x_fUZFVOXatH4552PzUsk8fC50IJyi_lsBMCQxbox1QRtBx4v9e2_v3y2anLfjzg--7HjlPYJi4mkLPHLXg5lx3fBo7A1OrVzcfDWXc1zo2mXq7d0YEVujkgxgbrqGfB1ebAmxs=w1608-h903-no');">
 				<div class="desc animate-box">
-					<h2><strong>Contact</strong> Us</h2>
-					<span>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FreeHTML5.co</a></span>
-					<span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span>
+					<h2><strong class="orange">Contact</strong> Us</h2>
+					<span><a class="btn btn-primary btn-md" href="getinvolved/volunteering.html">Get Involved</a></span>
 				</div>
 			</div>
 
@@ -180,6 +185,18 @@
 		</div>
 		<!-- END fh5co-contact -->
 		<div id="map" class="fh5co-map"></div>
+		<div id='menu'>
+			<input id='streets-v11' type='radio' name='rtoggle' value='streets' checked='checked'>
+			<label for='streets'>streets</label>
+			<input id='light-v10' type='radio' name='rtoggle' value='light'>
+			<label for='light'>light</label>
+			<input id='dark-v10' type='radio' name='rtoggle' value='dark'>
+			<label for='dark'>dark</label>
+			<input id='outdoors-v11' type='radio' name='rtoggle' value='outdoors'>
+			<label for='outdoors'>outdoors</label>
+			<input id='satellite-v9' type='radio' name='rtoggle' value='satellite'>
+			<label for='satellite'>satellite</label>
+		</div>
 		<!-- END map -->
 
 		
@@ -227,9 +244,14 @@
 	<!-- Superfish -->
 	<script src="static/js/hoverIntent.js"></script>
 	<script src="static/js/superfish.js"></script>
+
+		 <!-- openstreetMapjs -->
+		 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+		 integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+		 crossorigin=""></script>
 	
 	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLFqD2oidavgDCtS1XvrtB_BtjdAdkudU&callback=initMap"></script>
 	<script src="static/js/google_map.js"></script>
 	
 	<!-- Main JS -->

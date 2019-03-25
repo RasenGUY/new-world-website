@@ -1,49 +1,82 @@
+// function initMap() {
+    // The location of Uluru
+    // var uluru = {lat: 20.446160, lng: 106.347460};
+    // var centerPoint = {lat: 20.446160, lng: 106.347460}
+    // The map, centered at Uluru
+    // var map = new google.maps.Map(
+        // document.getElementById('map'), {zoom: 17, center: centerPoint});
+    // The marker, positioned at Uluru
+    // var marker = new google.maps.Marker({position: uluru, map: map, draggable: false, animation: google.maps.Animation.DROP });
+  
+//   }
+  //EVENTS
+//   google.maps.event.addDomListener(window, 'load', initMap);
+  // initMap();
 
-var google;
+//   var mymap = L.map('map').setView([20.446160, 106.347460], 15);
+mapboxgl.accessToken = 'pk.eyJ1IjoicmFzc2VuZ3V5IiwiYSI6ImNqdG9mY3piYTByY3EzeXA1eHM4cndoaDQifQ.fLBX6Vvj3af8TJH6vLbzWw';
 
-function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-    // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-    var myLatlng = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
-    // 39.399872
-    // -8.224454
-    
-    var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 7,
-
-        // The latitude and longitude to center the map (always required)
-        center: myLatlng,
-
-        // How you would like to style the map. 
-        scrollwheel: false,
-        styles: [{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]}]
-    };
-
-    
-
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
-    var mapElement = document.getElementById('map');
-
-    // Create the Google Map using out element and options defined above
-    var map = new google.maps.Map(mapElement, mapOptions);
-    
-    var addresses = ['Brooklyn'];
-
-    for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
-            var p = data.results[0].geometry.location
-            var latlng = new google.maps.LatLng(p.lat, p.lng);
-            new google.maps.Marker({
-                position: latlng,
-                map: map,
-                icon: 'images/loc.png'
-            });
-
-        });
-    }
-    
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+zoom: 16,
+center: [106.34772, 20.44608]
+});
+ 
+var layerList = document.getElementById('menu');
+var inputs = layerList.getElementsByTagName('input');
+ 
+function switchLayer(layer) {
+var layerId = layer.target.id;
+map.setStyle('mapbox://styles/mapbox/' + layerId);
 }
-google.maps.event.addDomListener(window, 'load', init);
+ 
+for (var i = 0; i < inputs.length; i++) {
+inputs[i].onclick = switchLayer;
+}
+
+map.on("load", function () {
+    /* Image: An image is loaded and added to the map. */
+    map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
+        if (error) throw error;
+        map.addImage("custom-marker", image);
+        /* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+        map.addLayer({
+            id: "markers",
+            type: "symbol",
+            /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+            source: {
+                type: "geojson",
+                data: {
+                    type: 'FeatureCollection',
+                    features: [
+                        {
+                            type: 'Feature',
+                            properties: {},
+                            geometry: {
+                                type: "Point",
+                                coordinates: [106.34772, 20.44608]
+                                
+                            }
+                        }]
+                    }
+                },
+                layout: {
+                    "icon-image": "custom-marker",
+                }
+            });
+        });
+
+    var popup = new mapboxgl.Popup({
+        closeOnClick: false,
+        offset: 23
+    })
+        .setLngLat([106.34772, 20.44608])
+        .setHTML('<h5>New World International English School</h5>')
+        .addTo(map);
+
+    });
+
+
+  
+  
