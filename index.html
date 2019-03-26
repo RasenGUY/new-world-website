@@ -83,7 +83,7 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo-word"><a href="index.html"><strong class="orange">New</strong> <strong class="blue">World</strong></a></h1>
+					<div id="fh5co-logo-word"><a href="index.html"><div class="shadow"><img src="static/images/logo/logo-v4.svg" alt="New World International English Teaching Center"></div></a></div>
 					<div id="fh5co-logo"><a href="index.html"><div class="shadow"><img src="static/images/logo/logo-v4.svg" alt="New World International English Teaching Center"></div></a></div>
 
 					<!-- START #fh5co-menu-wrap -->
@@ -249,7 +249,7 @@
 					<div class="desc animate-box">
 						<!-- <h2 class="text-center">We want you, apply with us</h2> -->
 						<!-- <br> -->
-						<span class="text-center"><a href="https://goo.gl/forms/42PxcOgwkW21OsGr2" class="btn btn-primary btn-md">Apply now</a></span>
+						<span class="text-center"><a href="https://goo.gl/forms/42PxcOgwkW21OsGr2" class="btn btn-primary btn-md" id="call-to-action-btn">Apply now</a></span>
 					</div>
 				</div>
 			</div>
@@ -394,6 +394,9 @@ readMore();
 // select doms
 var applyIn1 = $('#index-apply-btn-1');
 var indexHero = $('.index-hero');
+var menuHeaderMob = $("#fh5co-header-section");
+var logo = $('#fh5co-logo-word a div');
+var call2Action = $('#call-to-action-btn');
 
 
 // enquire medium screen
@@ -404,6 +407,16 @@ enquire.register("screen and (max-width: 768px)", {
 		applyIn1.toggleClass('btn-lg');
 		// add small button class
 		applyIn1.toggleClass('btn-md');
+		// change css of menuHeaderMob height -> 7rem
+		menuHeaderMob.css('height', '7rem');
+		// change css of logo box to 10.5 rem
+		logo.css({'height': '10.5rem', 'width': '10.5rem'});
+		// remove medium button class 
+		call2Action.toggleClass('btn-sm');
+		// change btn into smaller 
+		call2Action.toggleClass('btn-md');
+
+
 
 
 	},
@@ -414,6 +427,14 @@ enquire.register("screen and (max-width: 768px)", {
 		applyIn1.toggleClass('btn-md');
 		// add small btn class
 		applyIn1.toggleClass('btn-lg');
+		// change height back to norma
+		menuHeaderMob.css('height', '');
+		// visa versa logo box
+		logo.css({'height': '', 'width': ''});
+		// remove medium button class 
+		call2Action.toggleClass('btn-sm');
+		// change btn into smaller 
+		call2Action.toggleClass('btn-md');
 
 
 	}
@@ -430,6 +451,8 @@ enquire.register("screen and (max-width: 480px)", {
 		applyIn1.toggleClass('btn-sm');
 		// change position of index-hero image to the right
 		indexHero.css('background-position-x', 'right');
+		// change css of logo box to 9.5 rem
+		logo.css({'height': '9.5rem', 'width': '9.5rem'});
 
 	},
 
@@ -441,6 +464,8 @@ enquire.register("screen and (max-width: 480px)", {
 		applyIn1.toggleClass('btn-lg');
 		// change position of index-hero image to the right
 		indexHero.css('background-position-x', 'center');
+		// visa versa logo box
+		logo.css({'height': '', 'width': ''});
 	}
 
 });

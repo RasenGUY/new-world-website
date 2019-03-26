@@ -413,6 +413,12 @@ figure {
 }
 #fh5co-logo-word {
   display: none;
+  position: relative;
+  z-index: 2;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  float: left;
 }
 #fh5co-logo {
   display: content;
@@ -423,7 +429,7 @@ figure {
   font-weight: 700;
   float: left;
 }
-  #fh5co-logo a div {
+  #fh5co-logo a div, #fh5co-logo-word a div {
   position: absolute;
   padding: 0.5rem;
   width: 11.5rem;
