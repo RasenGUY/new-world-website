@@ -753,6 +753,11 @@ figure {
   padding: 7em 0;
   min-height: 500px;
 }
+#call-to-action{
+  min-height: none;
+  padding: 7em 0;
+}
+
 @media screen and (max-width: 768px) {
   #fh5co-portfolio {
     padding: 3em 0;
@@ -1103,10 +1108,10 @@ figure {
 }
 .fh5co-testimonial > div p,
 .fh5co-testimonial blockquote p, .fh5co-team > div p,
-.fh5co-team blockquote p {
-  font-size: 18px;
-  line-height: 1.6em;
-  color: #555555;
+.fh5co-team blockquote p span, .testimonial-text {
+  font-size: 18px !important;
+  line-height: 1.6em !important;
+  color: #555555 !important;
 }
 .fh5co-testimonial span, .fh5co-team span {
   font-style: italic;
@@ -1565,10 +1570,14 @@ a:focus, a:hover {
   
     
   /*  index page */ 
+  
+  #more{display: none;}
+
     .background-settings {
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-position: center;
     }
     .background-settings.index {
       background-position-y: -15rem;
@@ -1667,6 +1676,7 @@ a:focus, a:hover {
         .index-about .fh5co-overlay, .class-prep .container .row .col-md-6 .fh5co-overlay {
           background: rgba(66, 64, 64, 0.6) !important;
         }
+        
 
       /* get involveved volunteering */
         .volunteering {
@@ -1804,7 +1814,6 @@ a:focus, a:hover {
             transition: 0.5s;   
           }
 
-           */
 
 /* mobile  */
 

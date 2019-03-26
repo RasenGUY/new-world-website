@@ -133,6 +133,18 @@
 		}
 	};
 
+
+	var enquireMedium = function (){
+		enquire.register("screen and (max-width: 768px)", {
+
+
+		})
+	}
+	var enquireSmall = function (){
+		enquire.register("screen and (max-width: 480px)", {
+
+		})
+	}
 			
 	// Document on load.
 	$(function(){
