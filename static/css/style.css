@@ -236,8 +236,8 @@ figure {
 
 @media screen and (max-width: 768px) {
   .desc {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
   }
 }
 .fh5co-cover .desc h2 {
@@ -1639,10 +1639,31 @@ a:focus, a:hover {
         .index-about .container .row .desc > h1, .index-about .container .row .desc > h2, .index-about .container .row .desc > h4{
           color: var(--base-light);
         }
+        
         .index-about .container .row .desc > p, h4 {
           line-height: 1.8! important;
           letter-spacing: 2.5px;
         }
+        
+        @media screen and (max-width: 768px) {
+          .index-about .container .row .desc > h4 {
+            line-height: 1.8 !important;
+            letter-spacing: 2.5px;
+            font-size: 14px;
+          }
+          .index-about .container .row .desc > h1 {
+            line-height: 1.8 !important;
+            letter-spacing: 2.5px;
+            font-size: 26px;
+          }
+        }
+        @media screen and (max-width: 480px) {
+          .desc {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+          }
+        }
+
         .index-about .fh5co-overlay, .class-prep .container .row .col-md-6 .fh5co-overlay {
           background: rgba(66, 64, 64, 0.6) !important;
         }
@@ -1785,7 +1806,10 @@ a:focus, a:hover {
 
            */
 
-            
+/* mobile  */
+
+  /* index */
+
 
 
 
