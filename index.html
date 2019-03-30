@@ -246,10 +246,37 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="desc animate-box">
-						<!-- <h2 class="text-center">We want you, apply with us</h2> -->
-						<!-- <br> -->
-						<span class="text-center"><a href="https://goo.gl/forms/42PxcOgwkW21OsGr2" class="btn btn-primary btn-md" id="call-to-action-btn">Apply now</a></span>
+					<div class="desc animate-box col-md-12">
+							<h2 class="text-center">Interested in <strong class="orange">volunteering</strong> with us?</h2>
+							<br>
+							<div class="col-md-6 text-left">
+								<h3>What we <strong class="orange">offer</strong>: </h3>								
+								<ul class="remove-list-makeup">
+									<li>Food and Acommodation</li>
+									<li>Teaching Materials</li>
+									<li>Visa support (3 months)</li>
+									<li>Opportunities for travel </li>
+									<li>Stipend 200 USD (monthly)</li>
+									<li>Free 120h TEFL program if you commit to at least three months with us</li>
+									<li>Certificate/Recommendation letter</li>
+								</ul>
+								
+							</div>
+							<div class="col-md-6 text-right">
+								<h3 >What we <strong class="orange">require</strong>: </h3>
+								<ul class="remove-list-makeup">
+									<li>commitment of a minimum of 3 months</li>
+									<li>English Fluency</li>
+									<li>TEFL, CELTA, ESOL, TESOL or University/College Degree (not compulsary, but will definitely improve your placement in the application process)</li>
+									<li>Valid Passport</li>
+									<li>Open mindedness, calm and collective in teaching environments</li>
+									<li>Certificate/Recommendation letter</li>
+								</ul>
+						</div>
+						
+						<div class="col-md-12 text-center call-to-action-btn-apply-box">
+							<span><a href="https://goo.gl/forms/42PxcOgwkW21OsGr2" class="btn btn-primary btn-md" id="call-to-action-btn">Apply now</a></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -390,86 +417,9 @@ function readMore (){
 };
 readMore();
 
-												// enquire baby!!
-// select doms
-var applyIn1 = $('#index-apply-btn-1');
-var indexHero = $('.index-hero');
-var menuHeaderMob = $("#fh5co-header-section");
-var logo = $('#fh5co-logo-word a div');
-var call2Action = $('#call-to-action-btn');
 
-
-// enquire medium screen
-enquire.register("screen and (max-width: 768px)", {
-	match: function () {
-
-		// remove large button class 
-		applyIn1.toggleClass('btn-lg');
-		// add small button class
-		applyIn1.toggleClass('btn-md');
-		// change css of menuHeaderMob height -> 7rem
-		menuHeaderMob.css('height', '7rem');
-		// change css of logo box to 10.5 rem
-		logo.css({'height': '10.5rem', 'width': '10.5rem'});
-		// remove medium button class 
-		call2Action.toggleClass('btn-sm');
-		// change btn into smaller 
-		call2Action.toggleClass('btn-md');
-
-
-
-
-	},
-
-	unmatch: function (){
-		
-		// remove small btn class
-		applyIn1.toggleClass('btn-md');
-		// add small btn class
-		applyIn1.toggleClass('btn-lg');
-		// change height back to norma
-		menuHeaderMob.css('height', '');
-		// visa versa logo box
-		logo.css({'height': '', 'width': ''});
-		// remove medium button class 
-		call2Action.toggleClass('btn-sm');
-		// change btn into smaller 
-		call2Action.toggleClass('btn-md');
-
-
-	}
-});
-
-// enquire small screen 
-enquire.register("screen and (max-width: 480px)", {
-	
-	match: function () {
-
-		// remove large button class 
-		applyIn1.toggleClass('btn-lg');
-		// add small button class
-		applyIn1.toggleClass('btn-sm');
-		// change position of index-hero image to the right
-		indexHero.css('background-position-x', 'right');
-		// change css of logo box to 9.5 rem
-		logo.css({'height': '9.5rem', 'width': '9.5rem'});
-
-	},
-
-	unmatch: function (){
-		
-		// remove small btn class
-		applyIn1.toggleClass('btn-sm');
-		// add small btn class
-		applyIn1.toggleClass('btn-lg');
-		// change position of index-hero image to the right
-		indexHero.css('background-position-x', 'center');
-		// visa versa logo box
-		logo.css({'height': '', 'width': ''});
-	}
-
-});
 </script>
+<script src="static/js/enquire.js"></script>
 
 </body>
 </html>

@@ -1651,7 +1651,7 @@ a:focus, a:hover {
         .index-about .fh5co-overlay{
           z-index: 0;
         }
-        .index-about .container .row .desc > h1, .index-about .container .row .desc > h2, .index-about .container .row .desc > h4{
+        .index-about .container .row .desc > h1, h2, h3, h4{
           color: var(--base-light);
         }
         
@@ -1682,7 +1682,22 @@ a:focus, a:hover {
         .index-about .fh5co-overlay, .class-prep .container .row .col-md-6 .fh5co-overlay {
           background: rgba(66, 64, 64, 0.6) !important;
         }
-        
+      
+        .remove-list-makeup  {
+          list-style-type: none;
+          padding-left: 1rem; 
+          padding-right: 1rem; 
+          margin: 0;          
+        }
+         .remove-list-makeup > li  {
+           color: rgba(255, 255, 255, 0.7);
+         }
+         .remove-list-makeup > li:hover  {
+          color: var(--theme-one);
+        }
+         .call-to-action-btn-apply-box {
+          margin-top: 5rem;
+         } 
 
       /* get involveved volunteering */
         .volunteering {
