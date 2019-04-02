@@ -1767,7 +1767,6 @@ a:focus, a:hover {
         .volunteering .fh5co-cover {
           height: 100%;
         }
-
         .prep h4 {
           color: var(--base-dark);
         }
@@ -1776,19 +1775,19 @@ a:focus, a:hover {
           width: 100%; 
         }
             .img-1{
-              height: 26rem;
+              height: 31rem;
               width: 100%;
             }
             .img-2{
-              height: 42rem;
+              height: 46rem;
               width: 100%;
             }
             .img-3{
-              height: 45rem;
+              height: 40rem;
               width: 100%;
             }
             .img-4{
-              height: 35rem;
+              height: 43rem;
               width: 100%;
             }
 
@@ -1859,6 +1858,9 @@ a:focus, a:hover {
 /* mobile  */
 
   /* volunteering */
+  #vol-text-between-769-and-992 {
+    display: none;
+  }
 
 
 
