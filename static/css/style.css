@@ -256,10 +256,13 @@ figure {
     font-weight: inherit !important;
     display: inline-block !important;
   }
+  .spacer {
+    height: 1rem;
+  }
 
   .row.spacer {
     height: 2rem;
-}
+  }
 
   
 .fh5co-cover .desc h2 strong {
@@ -1552,9 +1555,7 @@ figure {
 /* new css  */
 
 /* general settings */
-/* p {
-  margin: 0px;
-} */
+
 a {
   color: var(--theme-one) !important;
   text-decoration:none;
@@ -1563,6 +1564,26 @@ a:focus, a:hover {
   color: var(--theme-two) !important;
   text-decoration: none !important;
 }
+.container {
+  padding: 0;
+}
+.row {
+  margin: 0;
+}
+
+.volunteering .row {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media(max-width: 1040px) {
+
+  .row{
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     width: 90%;
@@ -1774,21 +1795,23 @@ a:focus, a:hover {
           height: 38rem;
           width: 100%; 
         }
-            .img-1{
+          .vol-img {
+            width: 100%;
+          }
+            .vol-img.one{
               height: 31rem;
-              width: 100%;
             }
-            .img-2{
+            .vol-img.two{
               height: 46rem;
-              width: 100%;
             }
-            .img-3{
+            .vol-img.three{
               height: 40rem;
-              width: 100%;
             }
-            .img-4{
+            .vol-img.four{
               height: 43rem;
-              width: 100%;
+            }
+            .vol-img.five {
+              height: 48rem;
             }
 
             /* Get class prepartion (main page) */
@@ -1858,7 +1881,7 @@ a:focus, a:hover {
 /* mobile  */
 
   /* volunteering */
-  #vol-text-between-769-and-992 {
+  #medium-screen {
     display: none;
   }
 

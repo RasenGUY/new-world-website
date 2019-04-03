@@ -14,14 +14,15 @@ var inGalImg = $('#fh5co-portfolio-list li');
 
 // volunteering 
 var volunteering = $('.volunteering');
-var volTextLg = $('#vol-text-more-then-992');
-var volTextMd = $('#vol-text-between-769-and-992');
+var volTextLg = $('#large-screen');
+var volTextMd = $('#medium-screen');
 
-// enquire large screen <- 
-enquire.register("screen and (max-width: 1267px)", {
+// enquire large screen 
+enquire.register("screen and (max-width: 2560px)", {
 	match : function () {
+
 		// get involved volunteering 
-		//  change hero background position 
+		// change hero background position 
 		volunteering.css('background-position-y', '-7rem');
 	},
 	unmatch: function () {
@@ -33,24 +34,24 @@ enquire.register("screen and (max-width: 1267px)", {
 });
 
 // enquire 
-// enquire medium screen in between 769px and 992px
-enquire.register("screen and (min-width: 769px) and (max-width: 992px)", {
+// enquire normal 
+enquire.register("screen and (max-width: 1040px)", {
 	match: function () {
 
 		// volunteering
-		// for screens bigger or equal to 769px hide Lg content
+		// for screens smaller then or equal to 1040px hide content for large screen
 		volTextLg.css('display', 'none');
-		// for screens inbetween 769 and 992 show md content
+		// for screens smaller then or equal to 1040px show content for medium screen
 		volTextMd.css('display', 'contents');
-
 
 	},
 	unmatch: function(){
 		// volunteering
-		// for screens  outside of 769 and 992 display large contents
-		volTextLg.css('display', '');
-		// for screens inbetween 769 and 992 hide md content
-		volTextMd.css('display', 'none');
+		// for screens bigger then or equal to 1040px show content for large screen
+		volTextLg.css('display', 'contents');
+		// for screens bigger then or equal to 1040px show content for medium screen
+		volTextMd.css('display', '');
+
 	}
 });
 
