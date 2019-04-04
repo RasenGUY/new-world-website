@@ -1823,6 +1823,18 @@ a:focus, a:hover {
               height: 45rem;
             }
 
+            @media screen and (max-width: 1040px){
+              .vol-img.two {
+                height: 47rem;
+              }
+              .vol-img.four{
+                height: 44rem;
+              }
+              .vol-img.five{
+                height: 35rem;
+              }
+            }
+
             /* Get class prepartion (main page) */
         .class-prep .container .row .col-md-6 {
           height: 25rem;
