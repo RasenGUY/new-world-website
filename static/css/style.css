@@ -1556,6 +1556,10 @@ figure {
 
 /* general settings */
 
+.padding-off {
+  padding: 0;
+}
+
 a {
   color: var(--theme-one) !important;
   text-decoration:none;
@@ -1584,9 +1588,9 @@ a:focus, a:hover {
   }
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 90%;
+@media(max-width: 2560) {
+  #large-screen {
+    width: 40%;
   }
 }
 
@@ -1597,9 +1601,11 @@ a:focus, a:hover {
   }
 }
 
-@media screen and (max-width: 768px) .desc.volunteering-content {
-  padding-left: 5rem;
-  padding-right: 5rem;
+@media screen and (max-width: 768px) {}
+
+  .padding-off {
+    padding: 0px;
+  }
 }
   
     
@@ -1802,16 +1808,19 @@ a:focus, a:hover {
               height: 31rem;
             }
             .vol-img.two{
-              height: 46rem;
+              height: 41rem;
             }
             .vol-img.three{
               height: 40rem;
             }
             .vol-img.four{
-              height: 43rem;
+              height: 37.25rem;
             }
             .vol-img.five {
-              height: 48rem;
+              height: 15rem;
+            }
+            .vol-img.six {
+              height: 45rem;
             }
 
             /* Get class prepartion (main page) */
@@ -1881,7 +1890,7 @@ a:focus, a:hover {
 /* mobile  */
 
   /* volunteering */
-  #medium-screen {
+  #medium-screen, #tablet-screen {
     display: none;
   }
 

@@ -16,6 +16,7 @@ var inGalImg = $('#fh5co-portfolio-list li');
 var volunteering = $('.volunteering');
 var volTextLg = $('#large-screen');
 var volTextMd = $('#medium-screen');
+var volTextTb = $('#tablet-screen');
 
 // enquire large screen 
 enquire.register("screen and (max-width: 2560px)", {
@@ -43,7 +44,6 @@ enquire.register("screen and (max-width: 1040px)", {
 		volTextLg.css('display', 'none');
 		// for screens smaller then or equal to 1040px show content for medium screen
 		volTextMd.css('display', 'contents');
-
 	},
 	unmatch: function(){
 		// volunteering
@@ -81,8 +81,10 @@ enquire.register("screen and (max-width: 768px)", {
 	// get involved volunteering 
 		// move background picture downward
 		volunteering.css('background-position-y', '-10rem');
-		// add display none to text-content of page
-		volTextLg.css('display', 'none');
+		// for screens smaller then or equal to 768px hide content for medium-screen
+		volTextMd.css('display', 'none');
+		// for screens smaller then or equal to 768px show content for tablet-screen
+		volTextTb.css('display', 'contents');
 
 
 
@@ -111,8 +113,11 @@ enquire.register("screen and (max-width: 768px)", {
 
 		// move background picture downward (reset)
 		volunteering.css('background-position-y', '-7rem');
-		// add display none to text-content of page
-		// volTextLg.css('display', '');
+		// for screen bigger then 768px show md-screen content 
+		volTextTb.css('display', '');
+		// and hide tablet screen content 
+		volTextMd.css('display', 'contents');
+
 		
 
 
