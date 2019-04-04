@@ -1,4 +1,4 @@
-												// enquire baby!!
+								// enquire baby!!
 // select doms
 			
 // index
@@ -13,7 +13,7 @@ var inGalImg = $('#fh5co-portfolio-list li');
 // 	get involved
 
 // volunteering 
-var volunteering = $('.volunteering');
+var volHero = $('.volunteering');
 var volTextLg = $('#large-screen');
 var volTextMd = $('#medium-screen');
 var volTextTb = $('#tablet-screen');
@@ -24,12 +24,12 @@ enquire.register("screen and (max-width: 2560px)", {
 
 		// get involved volunteering 
 		// change hero background position 
-		volunteering.css('background-position-y', '-7rem');
+		volHero.css('background-position-y', '-7rem');
 	},
 	unmatch: function () {
 		// get involved volunteering 
 		// change hero background image position reset
-		volunteering.css('background-position-y', '-20rem');
+		volHero.css('background-position-y', '-20rem');
 
 	}
 });
@@ -78,9 +78,9 @@ enquire.register("screen and (max-width: 768px)", {
 		
 
 
-	// get involved volunteering 
+	// get involved volHero 
 		// move background picture downward
-		volunteering.css('background-position-y', '-10rem');
+		volHero.css('background-position-y', '-10rem');
 		// for screens smaller then or equal to 768px hide content for medium-screen
 		volTextMd.css('display', 'none');
 		// for screens smaller then or equal to 768px show content for tablet-screen
@@ -112,7 +112,7 @@ enquire.register("screen and (max-width: 768px)", {
 		// getinvolved volunteering 
 
 		// move background picture downward (reset)
-		volunteering.css('background-position-y', '-7rem');
+		volHero.css('background-position-y', '-7rem');
 		// for screen bigger then 768px show md-screen content 
 		volTextTb.css('display', '');
 		// and hide tablet screen content 
@@ -148,7 +148,7 @@ enquire.register("screen and (max-width: 480px)", {
 
 		// getinvolved volunteering
 		// change position of background image of hero
-		volunteering.css('background-position-x', 'center');
+		volHero.css({'background-position-x':'center', 'background-position-y':'2rem'});
 		// for screens  769px hide content
 		volTextLg.css('display', 'none');
 
@@ -175,7 +175,7 @@ enquire.register("screen and (max-width: 480px)", {
 
 		// volunteering
 		// change position of background image of hero (reset)
-		volunteering.css('background-position-x', 'center');
+		volHero.css('background-position-x', 'center');
 		// turn text content to display none
 		
 
