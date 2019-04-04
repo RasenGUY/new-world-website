@@ -1834,6 +1834,23 @@ a:focus, a:hover {
                 height: 35rem;
               }
             }
+            @media screen and  (max-width: 768px){
+              .vol-img.one {
+                height: 33rem;
+              }
+              .vol-img.two {
+                height: 30rem;
+              }
+              .vol-img.three {
+                height: 35rem;
+              }
+              .vol-img.four {
+                height: 38rem;
+              }
+              .vol-img.five {
+                height: 30rem;
+              }
+            }
 
             /* Get class prepartion (main page) */
         .class-prep .container .row .col-md-6 {
