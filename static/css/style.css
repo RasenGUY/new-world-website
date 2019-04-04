@@ -943,6 +943,25 @@ figure {
   #fh5co-features .feature-left .feature-copy {
     width: 80%;
   }
+
+  p, ol, ul, .fh5co-testimonial blockquote p, .testimonial-text {
+    font-size: 15px !important;
+  }
+
+  .h3, h3 {
+    font-size: 21px;
+  }
+  .h2, h2 {
+    font-size: 26px;
+  }
+  .heading-section p {
+    font-size: 17px;
+  }
+
+  .heading-section h3 {
+    font-size: 30px;
+  }
+
 }
 #fh5co-features .feature-left h3 {
   text-transform: uppercase;
@@ -1118,7 +1137,7 @@ figure {
 .fh5co-testimonial > div p,
 .fh5co-testimonial blockquote p, .fh5co-team > div p,
 .fh5co-team blockquote p span, .testimonial-text {
-  font-size: 18px !important;
+  font-size: 18px;
   line-height: 1.6em !important;
   color: #555555 !important;
 }
@@ -1557,7 +1576,11 @@ figure {
 /* general settings */
 
 .padding-off {
-  padding: 0;
+  padding: 0 !important;
+}
+
+.margin-off {
+  margin: 0 !important;
 }
 
 a {
@@ -1611,7 +1634,15 @@ a:focus, a:hover {
     
   /*  index page */ 
   
-  #more{display: none;}
+  #more{
+    display: none;
+  }
+  .testimonial-text {
+    display: none;
+  }
+  #spacer-small {
+    display: none;
+  }
 
     .background-settings {
       background-size: cover;
@@ -1706,11 +1737,21 @@ a:focus, a:hover {
             letter-spacing: 2.5px;
             font-size: 26px;
           }
+          .spacer-md {
+            display: contents;
+          }
         }
         @media screen and (max-width: 480px) {
           .desc {
             padding-left: 1rem !important;
             padding-right: 1rem !important;
+          }
+
+          .spacer-small {
+            display: content;
+          }
+          .spacer-md {
+            display: none;
           }
         }
 
@@ -1849,6 +1890,12 @@ a:focus, a:hover {
               }
               .vol-img.five {
                 height: 30rem;
+              }
+              .vol-img.six {
+                height: 50rem;
+              }
+              .vol-img.seven {
+                height: 50rem;
               }
             }
 
