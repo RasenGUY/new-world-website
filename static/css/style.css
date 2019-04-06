@@ -2,6 +2,8 @@
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  /* font-family: 'Brush Script MT'; */
+  /* src: url("../fonts/PWBrushScript.ttf"); */
   font-weight: normal;
   font-style: normal;
 }
@@ -1609,6 +1611,10 @@ a:focus, a:hover {
     margin-right: 1rem;
     margin-left: 1rem;
   }
+  .vol-img .row {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
 }
 
 @media(max-width: 2560) {
@@ -1725,7 +1731,12 @@ a:focus, a:hover {
           letter-spacing: 2.5px;
         }
 
-        
+        .spacer-small {
+          display: none; 
+        }
+        .spacer-md {
+          display: none;
+        }
         @media screen and (max-width: 768px) {
           .index-about .container .row .desc > h4 {
             line-height: 1.8 !important;
@@ -1866,7 +1877,7 @@ a:focus, a:hover {
 
             @media screen and (max-width: 1040px){
               .vol-img.two {
-                height: 47rem;
+                height: 50rem;
               }
               .vol-img.four{
                 height: 44rem;
@@ -1886,7 +1897,7 @@ a:focus, a:hover {
                 height: 35rem;
               }
               .vol-img.four {
-                height: 38rem;
+                height: 36rem;
               }
               .vol-img.five {
                 height: 30rem;
@@ -1924,7 +1935,8 @@ a:focus, a:hover {
             justify-self: stretch; 
             display: grid;
             align-items: center;
-          }
+          } 
+          
 
           .age-group-box .desc > h1{
             font-size: 15rem  ;
