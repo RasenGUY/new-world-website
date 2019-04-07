@@ -34,7 +34,6 @@
 		$(window).stellar();
 	};
 
-
 	// Offcanvas and cloning of the main menu
 	var offcanvas = function() {
 
@@ -95,7 +94,6 @@
 
 
 	// Animations
-
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.animate-box').waypoint( function( direction ) {
@@ -132,10 +130,8 @@
 		  })
 		}
 	};
-
-
 	
-		
+	
 
 			
 	// Document on load.

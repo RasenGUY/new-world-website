@@ -1,6 +1,9 @@
 								// enquire baby!!
 // select doms
-			
+// general
+var allImages = $('.container.vol-img');
+
+
 // index
 var applyIn1 = $('#index-apply-btn-1');
 var indexHero = $('.index-hero');
@@ -11,12 +14,15 @@ var call2ActionList = $('.call-to-action-list-0');
 var inGalImg = $('#fh5co-portfolio-list li');
 
 // 	get involved
-
 // volunteering 
 var volHero = $('.volunteering');
 var volTextLg = $('#large-screen');
 var volTextMd = $('#medium-screen');
 var volTextTb = $('#tablet-screen');
+
+// class prep
+// var prepTabHide = $('#prep-tablet-hide');
+// var prepTabShow = $('#prep-tablet-show');
 
 // enquire large screen 
 enquire.register("screen and (max-width: 2560px)", {
@@ -60,7 +66,6 @@ enquire.register("screen and (max-width: 768px)", {
 	match: function () {
 
 		//  index 
-
 		// remove large button class 
 		applyIn1.toggleClass('btn-lg');
 		// add small button class
@@ -75,25 +80,23 @@ enquire.register("screen and (max-width: 768px)", {
 		call2Action.toggleClass('btn-md');
 		// add spacing between call to action lists 
 		call2ActionList.css('margin-bottom', '2rem');
-		
 
-
-	// get involved volHero 
-		// move background picture downward
+	// get involved 
+		// volunteering
+		// move hero background picture downward
 		volHero.css('background-position-y', '-10rem');
 		// for screens smaller then or equal to 768px hide content for medium-screen
 		volTextMd.css('display', 'none');
 		// for screens smaller then or equal to 768px show content for tablet-screen
 		volTextTb.css('display', 'contents');
-
-
-
-
-
+		// class prep (2-4)
+		// hide content for tablet screens
+		prepTabHide.css('display', 'none');
+		// show content for tablet screens;
+		prepTabShow.css('display', 'block');
 	},
 
-	unmatch: function (){
-		
+	unmatch: function (){		
 		// remove small btn class
 		applyIn1.toggleClass('btn-md');
 		// add small btn class
@@ -109,8 +112,8 @@ enquire.register("screen and (max-width: 768px)", {
 		// add spacing between call to action lists 
 		call2ActionList.css('margin-bottom', '');
 
-		// getinvolved volunteering 
-
+		// getinvolved 
+		//volunteering 
 		// move background picture downward (reset)
 		volHero.css('background-position-y', '-7rem');
 		// for screen bigger then 768px show md-screen content 
@@ -118,9 +121,11 @@ enquire.register("screen and (max-width: 768px)", {
 		// and hide tablet screen content 
 		volTextMd.css('display', 'contents');
 
-		
-
-
+		// class prep (2-4)
+		// hide content for tablet screens
+		// prepTabHide.css('display', 'block');
+		// show content for tablet screens
+		// prepTabShow.css('display', 'none');
 	}
 });
 

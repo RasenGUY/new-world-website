@@ -258,13 +258,6 @@ figure {
     font-weight: inherit !important;
     display: inline-block !important;
   }
-  .spacer {
-    height: 1rem;
-  }
-
-  .row.spacer {
-    height: 2rem;
-  }
 
   
 .fh5co-cover .desc h2 strong {
@@ -1646,9 +1639,6 @@ a:focus, a:hover {
   .testimonial-text {
     display: none;
   }
-  #spacer-small {
-    display: none;
-  }
 
     .background-settings {
       background-size: cover;
@@ -1731,12 +1721,36 @@ a:focus, a:hover {
           letter-spacing: 2.5px;
         }
 
-        .spacer-small {
-          display: none; 
+        .spacer {
+          height: 1.25em;
+        }
+      
+        .row.spacer {
+          height: 1.25em;
+        }
+        .spacer-sm {
+          display: none;
         }
         .spacer-md {
           display: none;
         }
+
+        @media screen and (max-width: 780px){
+          .spacer-md {
+            display: inline-block; 
+          }
+        }
+        
+        @media screen and (max-width: 480px) {
+          .spacer-sm {
+            display: inline-block;
+          } 
+          .spacer-md {
+            display: none;
+          }
+        }
+
+
         @media screen and (max-width: 768px) {
           .index-about .container .row .desc > h4 {
             line-height: 1.8 !important;
@@ -1748,23 +1762,15 @@ a:focus, a:hover {
             letter-spacing: 2.5px;
             font-size: 26px;
           }
-          .spacer-md {
-            display: contents;
-          }
+
         }
         @media screen and (max-width: 480px) {
           .desc {
             padding-left: 1rem !important;
             padding-right: 1rem !important;
           }
-
-          .spacer-small {
-            display: content;
-          }
-          .spacer-md {
-            display: none;
-          }
         }
+
 
         .index-about .fh5co-overlay, .class-prep .container .row .col-md-6 .fh5co-overlay {
           background: rgba(66, 64, 64, 0.6) !important;
@@ -1849,10 +1855,7 @@ a:focus, a:hover {
         .prep h4 {
           color: var(--base-dark);
         }
-        .prep-img {
-          height: 38rem;
-          width: 100%; 
-        }
+
           .vol-img {
             width: 100%;
           }
@@ -1875,7 +1878,26 @@ a:focus, a:hover {
               height: 45rem;
             }
 
+            .prep-img {
+              width: 100%; 
+            }
+              /* age-group 2-4 */
+              .prep-img.one {
+                height: 37rem;
+              }
+              .prep-img.two {
+                height: 42rem;
+              }
+              /* class-preparation 5-8 */
+              .prep-img.ag-5-8.one {
+                height: 36rem;
+              }
+              .prep-img.ag-5-8.two {
+                height: 39rem;
+              }
+
             @media screen and (max-width: 1040px){
+              /* volunteering */
               .vol-img.two {
                 height: 50rem;
               }
@@ -1885,8 +1907,24 @@ a:focus, a:hover {
               .vol-img.five{
                 height: 35rem;
               }
+
+              /* class-preperation 2-4 */
+              .prep-img.one {
+                height: 41rem;
+              }
+              .prep-img.two {
+                height: 48rem;
+              }
+              /* class-preparation 5-8 */
+              .prep-img.ag-5-8.one {
+              height: 43rem;
+              }
+              .prep-img.ag-5-8.two {
+              height: 46rem;
+              }
             }
             @media screen and  (max-width: 768px){
+              /* volunteering */
               .vol-img.one {
                 height: 33rem;
               }
@@ -1897,7 +1935,7 @@ a:focus, a:hover {
                 height: 35rem;
               }
               .vol-img.four {
-                height: 36rem;
+                height: 37rem;
               }
               .vol-img.five {
                 height: 30rem;
@@ -1907,6 +1945,27 @@ a:focus, a:hover {
               }
               .vol-img.seven {
                 height: 50rem;
+              }
+
+              /* class preperation 2-4 */
+              .prep-img.one{
+                height: 23rem;
+              }
+              .prep-img.two{
+                height: 51rem;
+              }
+              /* class-preparation 5-8 */
+              .prep-img.ag-5-8.one {
+                height: 31rem;
+              }
+              .prep-img.ag-5-8.two {
+              height: 54rem;
+              }
+            }
+
+            @media screen and (max-width: 480px){
+              .prep-img.two{
+                height: 23rem;
               }
             }
 
@@ -1939,11 +1998,10 @@ a:focus, a:hover {
           
 
           .age-group-box .desc > h1{
-            font-size: 15rem  ;
-            font-family: "Brush Script MT" !important;
+            font-size: 15rem;
+            font-family: "Brush Script MT", Open Sans, Arial, sans-serif;
             color: var(--base-light);
           }
-
 
           .class-prep .row .col-md-6 .age-group-box .desc :hover {
               background-color: transparent;
@@ -1974,6 +2032,22 @@ a:focus, a:hover {
             transition: 0.5s;   
           }
 
+          #prep-tablet-hide {
+            display: block;
+          }
+
+          #prep-tablet-show {
+            display: none;
+          }
+
+          @media screen and (max-width: 768px){
+            #prep-tablet-hide {
+              display: none;
+            }
+            #prep-tablet-show {
+              display: block;
+            } 
+          }
 
 /* mobile  */
 
