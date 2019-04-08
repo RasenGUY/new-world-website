@@ -1896,6 +1896,16 @@ a:focus, a:hover {
                 height: 39rem;
               }
 
+              /* class-preparation 9-11 */
+              .prep-img.ag-9-11.one {
+                height: 28rem;
+              }
+              .prep-img.ag-9-11.two {
+                height: 33rem;
+              }
+              .prep-img.ag-9-11.three {
+                height: 33rem;
+              }
             @media screen and (max-width: 1040px){
               /* volunteering */
               .vol-img.two {
@@ -1921,6 +1931,17 @@ a:focus, a:hover {
               }
               .prep-img.ag-5-8.two {
               height: 46rem;
+              }
+              
+              /* class-preparation 9-11 */
+              .prep-img.ag-9-11.one {
+                height: 43rem;
+              }
+              .prep-img.ag-9-11.two {
+                height: 30rem;
+              }
+              .prep-img.ag-9-11.three {
+                height: 30rem;
               }
             }
             @media screen and  (max-width: 768px){
@@ -1960,6 +1981,17 @@ a:focus, a:hover {
               }
               .prep-img.ag-5-8.two {
               height: 54rem;
+              }
+
+              /* class-preparation 9-11 */
+              .prep-img.ag-9-11.one {
+                height: 38rem;
+              }
+              .prep-img.ag-9-11.two {
+                height: 29.5rem;
+              }
+              .prep-img.ag-9-11.three {
+                height: 29.5rem;
               }
             }
 
@@ -2031,22 +2063,36 @@ a:focus, a:hover {
             -o-transition: 0.5s;
             transition: 0.5s;   
           }
-
-          #prep-tablet-hide {
+          #prep-large-hide, #prep-tablet-hide, #prep-phone-hide {
             display: block;
           }
-
-          #prep-tablet-show {
+          #prep-tablet-show, #prep-phone-show, #prep-large-show {
             display: none;
           }
 
+          @media screen and (max-width: 1040px){
+            #prep-large-hide {
+              display: none;
+            }    
+            #prep-large-show {
+              display: block;
+            }    
+          }
           @media screen and (max-width: 768px){
-            #prep-tablet-hide {
+            #prep-tablet-hide, #prep-large-show {
               display: none;
             }
             #prep-tablet-show {
               display: block;
-            } 
+            }
+          }
+          @media screen and (max-width: 480px){
+            #prep-phone-hide {
+              display: none;
+            }
+            #prep-phone-show {
+              display: block;
+            }
           }
 
 /* mobile  */
