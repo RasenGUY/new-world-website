@@ -1906,6 +1906,13 @@ a:focus, a:hover {
               .prep-img.ag-9-11.three {
                 height: 33rem;
               }
+              /* preperation ag group 12-17 */
+              .prep-img.ag-12-17.one {
+                height: 41rem;
+              }
+              .prep-img.ag-12-17.two {
+                height: 31rem;
+              }
             @media screen and (max-width: 1040px){
               /* volunteering */
               .vol-img.two {
@@ -1942,6 +1949,14 @@ a:focus, a:hover {
               }
               .prep-img.ag-9-11.three {
                 height: 30rem;
+              }
+
+              /* preperation ag group 12-17 */
+              .prep-img.ag-12-17.one {
+                height: 28rem;
+              }
+              .prep-img.ag-12-17.two {
+                height: 33.5rem;
               }
             }
             @media screen and  (max-width: 768px){
@@ -1992,6 +2007,14 @@ a:focus, a:hover {
               }
               .prep-img.ag-9-11.three {
                 height: 29.5rem;
+              }
+
+              /* preperation ag group 12-17 */
+              .prep-img.ag-12-17.one {
+                height: 35.5rem;
+              }
+              .prep-img.ag-12-17.two {
+                height: 41.5rem;
               }
             }
 
