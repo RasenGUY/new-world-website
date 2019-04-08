@@ -1,4 +1,4 @@
-								// enquire baby!!
+			// enquire baby!!
 // select doms
 // general
 var allImages = $('.container.vol-img');
@@ -20,9 +20,7 @@ var volTextLg = $('#large-screen');
 var volTextMd = $('#medium-screen');
 var volTextTb = $('#tablet-screen');
 
-// class prep
-// var prepTabHide = $('#prep-tablet-hide');
-// var prepTabShow = $('#prep-tablet-show');
+
 
 // enquire large screen 
 enquire.register("screen and (max-width: 2560px)", {
@@ -40,22 +38,21 @@ enquire.register("screen and (max-width: 2560px)", {
 	}
 });
 
-// enquire 
 // enquire normal 
-enquire.register("screen and (max-width: 1040px)", {
+enquire.register("screen and (max-width: 1024px)", {
 	match: function () {
 
 		// volunteering
-		// for screens smaller then or equal to 1040px hide content for large screen
+		// for screens smaller then or equal to 1024px hide content for large screen
 		volTextLg.css('display', 'none');
-		// for screens smaller then or equal to 1040px show content for medium screen
+		// for screens smaller then or equal to 1024px show content for medium screen
 		volTextMd.css('display', 'contents');
 	},
 	unmatch: function(){
 		// volunteering
-		// for screens bigger then or equal to 1040px show content for large screen
+		// for screens bigger then or equal to 1024px show content for large screen
 		volTextLg.css('display', 'contents');
-		// for screens bigger then or equal to 1040px show content for medium screen
+		// for screens bigger then or equal to 1024px show content for medium screen
 		volTextMd.css('display', '');
 
 	}
@@ -89,11 +86,7 @@ enquire.register("screen and (max-width: 768px)", {
 		volTextMd.css('display', 'none');
 		// for screens smaller then or equal to 768px show content for tablet-screen
 		volTextTb.css('display', 'contents');
-		// class prep (2-4)
-		// hide content for tablet screens
-		prepTabHide.css('display', 'none');
-		// show content for tablet screens;
-		prepTabShow.css('display', 'block');
+		
 	},
 
 	unmatch: function (){		
@@ -121,11 +114,6 @@ enquire.register("screen and (max-width: 768px)", {
 		// and hide tablet screen content 
 		volTextMd.css('display', 'contents');
 
-		// class prep (2-4)
-		// hide content for tablet screens
-		// prepTabHide.css('display', 'block');
-		// show content for tablet screens
-		// prepTabShow.css('display', 'none');
 	}
 });
 
@@ -188,3 +176,38 @@ enquire.register("screen and (max-width: 480px)", {
 	}
 
 });
+
+
+
+// select images  
+var imgFour = $('#img-four .row div');   
+var imgFourSm = $('#img-four-small .row div');
+
+// function for border radius normal screen
+var imgBor = () => {
+	// step 1 select all #img-four div
+	// step 2 create for loop for each  first div
+	// step 3 create for loop for each second div
+	// step 4 create for loop for each third div
+	for (var i = 0; i <= imgFour.length; i+=4){
+		$(imgFour[i]).css('border-top-left-radius', '1rem');		
+	};
+	for (var i = 1; i <= imgFour.length; i+=4){
+		$(imgFour[i]).css('border-top-right-radius', '1rem');		
+	};
+	for (var i = 2; i <= imgFour.length; i+=4){
+		$(imgFour[i]).css('border-bottom-left-radius', '1rem');		
+	};
+	for (var i = 3; i <= imgFour.length; i+=4){
+		$(imgFour[i]).css('border-bottom-right-radius', '1rem');		
+		};
+};
+
+var imgBorSm = () => {
+	for (let i = 0; i <= imgFourSm.length; i++) {
+		// selct the first img
+		$(imgFourSm[i]).css({
+			'border-radius': '1rem'
+		});	
+	}
+}

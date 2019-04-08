@@ -1598,7 +1598,7 @@ a:focus, a:hover {
   margin-right: 1rem;
 }
 
-@media(max-width: 1040px) {
+@media(max-width: 1024px) {
 
   .row{
     margin-right: 1rem;
@@ -1913,7 +1913,7 @@ a:focus, a:hover {
               .prep-img.ag-12-17.two {
                 height: 31rem;
               }
-            @media screen and (max-width: 1040px){
+            @media screen and (max-width: 1024px){
               /* volunteering */
               .vol-img.two {
                 height: 50rem;
@@ -2093,7 +2093,7 @@ a:focus, a:hover {
             display: none;
           }
 
-          @media screen and (max-width: 1040px){
+          @media screen and (max-width: 1024px){
             #prep-large-hide {
               display: none;
             }    
