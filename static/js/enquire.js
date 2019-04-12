@@ -115,8 +115,6 @@ enquire.register("screen and (max-width: 768px)", {
 		volTextTb.css('display', '');
 		// and hide tablet screen content 
 		volTextMd.css('display', 'contents');
-
-
 	}
 });
 
