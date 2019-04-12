@@ -82,7 +82,7 @@ enquire.register("screen and (max-width: 768px)", {
 	// get involved 
 		// volunteering
 		// move hero background picture downward
-		volHero.css('background-position-y', '-10rem');
+		volHero.css('background-position-y', '0rem');
 		// for screens smaller then or equal to 768px hide content for medium-screen
 		volTextMd.css('display', 'none');
 		// for screens smaller then or equal to 768px show content for tablet-screen
