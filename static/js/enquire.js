@@ -138,6 +138,8 @@ enquire.register("screen and (max-width: 480px)", {
 		volHero.css({'background-position-x':'center', 'background-position-y':'2rem'});
 		// for screens  769px hide content
 		volTextLg.css('display', 'none');
+		// run function for border radius on travel pictures 
+		imgBorSm('1rem', '1.25em');
 
 	},
 
@@ -163,13 +165,46 @@ enquire.register("screen and (max-width: 480px)", {
 		// volunteering
 		// change position of background image of hero (reset)
 		volHero.css('background-position-x', 'center');
-		// turn text content to display none
-		
-
-
+		imgBorSm('', '');
+		imgBor();
 	}
 
 });
 
+
+var imgBorSm = (bRad, marBot) => {
+	// select images 	
+	var imgFourSm = $('.img-four-sm .row div');
+
+	for (let i = 0; i <= imgFourSm.length; i++) {
+		// selct the first img
+		$(imgFourSm[i]).css({
+			'border-radius': bRad, 'margin-bottom' : marBot
+		});	
+	}
+	}
+
+	// function for border radius normal screen
+
+	var imgBor = () => {
+			// select all images  
+			var imgFour = $('#img-four .row div');   
+			// step 1 select all #img-four div
+			// step 2 create for loop for each  first div
+			// step 3 create for loop for each second div
+			// step 4 create for loop for each third div
+			for (var i = 0; i <= imgFour.length; i+=4){
+				$(imgFour[i]).css('border-top-left-radius', '1rem');		
+			};
+			for (var i = 1; i <= imgFour.length; i+=4){
+				$(imgFour[i]).css('border-top-right-radius', '1rem');		
+			};
+			for (var i = 2; i <= imgFour.length; i+=4){
+				$(imgFour[i]).css('border-bottom-left-radius', '1rem');		
+			};
+			for (var i = 3; i <= imgFour.length; i+=4){
+				$(imgFour[i]).css('border-bottom-right-radius', '1rem');		
+				};
+			};
 
 

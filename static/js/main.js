@@ -132,12 +132,12 @@
 	};
 	
 // functions for border radius
-		// select images  
-		var imgFour = $('#img-four .row div');   
-		var imgFourSm = $('#img-four-small .row div');
 
-		// function for border radius normal screen
-		var imgBor = () => {
+// function for border radius normal screen
+
+var imgBor = () => {
+		// select all images  
+		var imgFour = $('#img-four .row div');   
 		// step 1 select all #img-four div
 		// step 2 create for loop for each  first div
 		// step 3 create for loop for each second div
@@ -156,14 +156,7 @@
 			};
 		};
 
-		var imgBorSm = () => {
-		for (let i = 0; i <= imgFourSm.length; i++) {
-			// selct the first img
-			$(imgFourSm[i]).css({
-				'border-radius': '1rem'
-			});	
-		}
-		}
+
 
 
 	
@@ -179,7 +172,7 @@
 		stickyBanner();
 		// change img radius 
 		imgBor();
-		imgBorSm();
+		// imgBorSm();
 	});
 
 }());

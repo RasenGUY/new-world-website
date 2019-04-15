@@ -1820,6 +1820,17 @@ a:focus, a:hover {
           height: 50rem;
           background-position-y: -20rem;
         }
+
+        @media screen and (max-width: 1024px){
+          .hero-sm {
+            background-position-y: 0;
+          }
+        }
+        @media screen and (max-width: 768px){
+          .hero-sm {
+            background-position-y: 0;
+          }
+        }
         .faq .row .col-md-12 {
           padding: 0;
         }
@@ -1907,7 +1918,7 @@ a:focus, a:hover {
                 height: 37rem;
               }
               .prep-img.two {
-                height: 42rem;
+                height: 39rem;
               }
               /* class-preparation 5-8 */
               .prep-img.ag-5-8.one {
@@ -1976,10 +1987,10 @@ a:focus, a:hover {
                 height: 43rem;
               }
               .prep-img.ag-9-11.two {
-                height: 30rem;
+                height: 31.25rem;
               }
               .prep-img.ag-9-11.three {
-                height: 30rem;
+                height: 31.25rem;
               }
 
               /* preperation ag group 12-17 */
@@ -1993,25 +2004,25 @@ a:focus, a:hover {
             @media screen and  (max-width: 768px){
               /* volunteering */
               .vol-img.one {
-                height: 33rem;
+                height: 28rem;
               }
               .vol-img.two {
-                height: 30rem;
+                height: 28rem;
               }
               .vol-img.three {
                 height: 35rem;
               }
               .vol-img.four {
-                height: 37rem;
+                height: 30rem;
               }
               .vol-img.five {
-                height: 30rem;
+                height: 33rem;
               }
               .vol-img.six {
                 height: 50rem;
               }
               .vol-img.seven {
-                height: 50rem;
+                height: 45rem;
               }
 
               /* class preperation 2-4 */
