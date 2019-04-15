@@ -820,16 +820,35 @@ figure {
   transition: 0.5s;
   background: transparent;
 }
+
+
 #fh5co-portfolio-list li a:hover:before {
   background: rgba(0, 0, 0, 0.5);
 }
+#fh5co-portfolio-list li:nth-child(1) a:hover:before {
+  border-top-left-radius: 1rem;
+}
+#fh5co-portfolio-list li:nth-child(2) a:hover:before {
+  border-top-right-radius: 1rem;
+}
+#fh5co-portfolio-list li:nth-child(3) a:hover:before {
+  border-bottom-left-radius: 1rem;
+}
+#fh5co-portfolio-list li:nth-child(4) a:hover:before {
+  border-bottom-right-radius: 1rem;
+}
+
 #fh5co-portfolio-list li a .case-studies-summary {
+  display: none;
   width: auto;
   bottom: 2em;
   left: 2em;
   right: 2em;
   position: absolute;
   z-index: 100;
+}
+#fh5co-portfolio-list li a:hover .case-studies-summary {
+  display: block;
 }
 @media screen and (max-width: 768px) {
   #fh5co-portfolio-list li a .case-studies-summary {
@@ -839,7 +858,7 @@ figure {
   }
 }
 #fh5co-portfolio-list li a .case-studies-summary span {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
@@ -864,6 +883,20 @@ figure {
 @media screen and (max-width: 480px) {
   #fh5co-portfolio-list li.two-third {
     width: 100%;
+  }
+  #fh5co-portfolio-list li:nth-child(1) a:hover:before {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  #fh5co-portfolio-list li:nth-child(2) a:hover:before {
+    border-radius: 0px ;
+  }
+  #fh5co-portfolio-list li:nth-child(3) a:hover:before {
+    border-radius: 0px;
+  }
+  #fh5co-portfolio-list li:nth-child(4) a:hover:before {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
 }
 #fh5co-portfolio-list li.one-third {
@@ -902,7 +935,7 @@ figure {
 
 }
 #fh5co-features .feature-left .icon i {
-  color: #d9d9d9 !important;
+  color: var(--theme-one) !important;
 }
 #fh5co-features .feature-left .icon {
   float: left;
@@ -1723,7 +1756,7 @@ a:focus, a:hover {
           display: none;
         }
 
-        @media screen and (max-width: 780px){
+        @media screen and (max-width: 768px){
           .spacer-md {
             display: inline-block; 
           }
@@ -1782,7 +1815,7 @@ a:focus, a:hover {
          } 
 
       /* get involveved volunteering */
-        .volunteering {
+        .hero-sm {
           position: relative;
           height: 50rem;
           background-position-y: -20rem;
@@ -1837,7 +1870,7 @@ a:focus, a:hover {
           margin: 0;
         }
 
-        .volunteering .fh5co-cover {
+        .hero-sm .fh5co-cover {
           height: 100%;
         }
         .prep h4 {
@@ -1848,22 +1881,22 @@ a:focus, a:hover {
             width: 100%;
           }
             .vol-img.one{
-              height: 31rem;
+              height: 27rem;
             }
             .vol-img.two{
-              height: 41rem;
+              height: 42rem;
             }
             .vol-img.three{
               height: 40rem;
             }
             .vol-img.four{
-              height: 37.25rem;
+              height: 39rem;
             }
             .vol-img.five {
-              height: 15rem;
+              height: 29rem;
             }
             .vol-img.six {
-              height: 45rem;
+              height: 48rem;
             }
 
             .prep-img {
@@ -1903,14 +1936,24 @@ a:focus, a:hover {
               }
             @media screen and (max-width: 1024px){
               /* volunteering */
+              
+              .vol-img.one {
+                height: 30rem;
+              }
               .vol-img.two {
-                height: 50rem;
+                height: 47rem;
+              }
+              .vol-img.three {
+                height: 43rem;
               }
               .vol-img.four{
-                height: 44rem;
+                height: 45rem;
               }
               .vol-img.five{
-                height: 35rem;
+                height: 36rem;
+              }
+              .vol-img.six{
+                height: 39.25rem;
               }
 
               /* class-preperation 2-4 */

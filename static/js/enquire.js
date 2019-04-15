@@ -23,19 +23,12 @@ var volTextTb = $('#tablet-screen');
 
 
 // enquire large screen 
-enquire.register("screen and (max-width: 2560px)", {
-	match : function () {
-
-		// get involved volunteering 
-		// change hero background position 
-		volHero.css('background-position-y', '-7rem');
-
+enquire.register("screen and (min-width: 1024px)", {
+	match: function () {
+	
 	},
-	unmatch: function () {
-		// get involved volunteering 
-		// change hero background image position reset
-		volHero.css('background-position-y', '-20rem');
-
+	unmatch: function(){
+		
 	}
 });
 
